@@ -34,18 +34,21 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}
-        >Introducción</p>
-        <h2 className={styles.sectionHeadText}
-        >Resumen</h2>
+        <p className={`${styles.sectionSubText} text-center`}>
+          Introducción
+          </p>
+        <h2 className={`${styles.sectionHeadText} text-center`}>
+          Resumen
+        </h2>
       </motion.div>
-  
-      <motion.p 
-        variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[16px] max-w-7xl leading-[30px]'
-        >   Si tuviera que describir mis fortalezas, diría sin duda alguna que la más importante es mi avidez por el aprendizaje. Durante toda mi carrera laboral siempre me han remarcado la versatilidad que tengo para cumplir con todos los desafíos que me han y me he propuesto. Busco siempre mi crecimiento personal y profesional ya que, si puedo aprender algo nuevo, independientemente de lo insignificante que parezca, para mí ya es valor agregado. Soy muy perseverante y más aun cuando me siento motivada.
-      </motion.p>
-
+      <div className='w-full flex'>
+        <motion.p 
+          variants={fadeIn("", "", 0.1, 1)}
+          className='mt-4 text-secondary text-[16px] max-w-7xl leading-[30px]'
+          >   
+          Si tuviera que describir mis fortalezas, diría sin duda alguna que la más importante es mi avidez por el aprendizaje. Durante toda mi carrera laboral siempre me han remarcado la versatilidad que tengo para cumplir con todos los desafíos que me han y me he propuesto. Busco siempre mi crecimiento personal y profesional ya que, si puedo aprender algo nuevo, independientemente de lo insignificante que parezca, para mí ya es valor agregado. Soy muy perseverante y más aun cuando me siento motivada.
+        </motion.p>
+      </div>
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
