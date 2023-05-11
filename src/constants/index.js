@@ -203,67 +203,71 @@ import {
   
   const projects = [
     {
-      name: "Car Rent",
+      name: "App de perros",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "¡Mi primera creación! Fue mi trabajo individual para el bootcamp de Henry. En esta página podrás ver todas las razas de perros que nos brinda una API de perros externa y a su vez cargar tus propios perros, ya que en mi caso particular también amo a los perros sin raza comercial. Podrás filtrarlos por temperamento y por fuente: es decir si son perros que provienen de la API o son cargados por tí. También los puedes ordernar alfabéticamente y por peso.",
       tags: [
         {
           name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "javascript",
           color: "green-text-gradient",
         },
         {
-          name: "tailwind",
+          name: "postgreSQL",
           color: "pink-text-gradient",
         },
       ],
       image: carrent,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/Belen-Cufre/PI-Dogs-main/",
     },
     {
-      name: "Job IT",
+      name: "Mi CV",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "Con motivo de mi falta de experiencia en HTML y CSS, decidí seguir practicando y hacer mi CV. Tiene un menú desplegable que incluye la opción de ver el mismo CV en inglés. También cuenta con mi información de contacto para facilitar la comunicación.",
       tags: [
         {
-          name: "react",
+          name: "HTML",
           color: "blue-text-gradient",
         },
         {
-          name: "restapi",
+          name: "CSS",
           color: "green-text-gradient",
         },
         {
-          name: "scss",
+          name: "Visual Studio Code",
           color: "pink-text-gradient",
         },
       ],
       image: jobit,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/Belen-Cufre/CV_Cufre",
     },
     {
-      name: "Trip Guide",
+      name: "Patitas Felices",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "Página web creada como trabajo final para el bootcamp de Henry. Fue un trabajo grupal de 8 miembros. Mi desempeño se basó mayormente en el Backend. La página se hizo para un refugio de perros de la provincia de Córdoba, Argentina. A través del sitio, se puede solicitar la adopción de los perros disponibles, hacer donaciones y compras de productos. También se pueden dejar reseñas una vez logueado y los usuarios con perfil de administrador tienen acceso a una sección privada donde se pueden gestionar las compras, las adopciones, los permisos de los usuarios, entre otras.",
       tags: [
         {
-          name: "nextjs",
+          name: "React",
           color: "blue-text-gradient",
         },
         {
-          name: "supabase",
+          name: "JavaScript",
           color: "green-text-gradient",
         },
         {
-          name: "css",
+          name: "Material UI",
           color: "pink-text-gradient",
+        },
+        {
+          name: "PostgreSQL",
+          color: "blue-text-gradient",
         },
       ],
       image: tripguide,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/FedeCoderTeam/PatitasFelices",
     },
   ];
   

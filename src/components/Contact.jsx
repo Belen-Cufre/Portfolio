@@ -59,7 +59,7 @@ const Contact = () => {
       className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
       >
         <p className={styles.sectionSubText}>
-          ¿Queres comunicarte conmigo?
+          ¿Querés comunicarte conmigo?
         </p>
         <h3 className={styles.sectionHeadText}>
           Contacto
