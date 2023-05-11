@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <nav className={`
-    ${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}>
+    ${styles.paddingX} w-full flex items-center py-3 fixed top-0 z-20 bg-primary`}>
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link 
         to= '/'
@@ -20,7 +20,7 @@ const Navbar = () => {
           window.scrollTo(0, 0);
         }}
         >
-          <img src={logo} alt="logo" className='w-20 h-25 border-radius:9'/>
+          <img src={logo} alt="logo" className='w-12 h-12 border-radius:9'/>
           <p className='text-white text-[18px] font-bold cursor-pointer flex'>Belén &nbsp;<span className='sm:block hidden'>| Cufré</span></p>
         </Link>
           <ul className='list-none hidden sm:flex flex-row gap-10'>
