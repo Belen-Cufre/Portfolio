@@ -4,7 +4,7 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
-const Computers = ({ isMobile }) => {
+const Computers = (isMobile) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
 
   return (
@@ -19,7 +19,7 @@ const Computers = ({ isMobile }) => {
         shadow-mapSize={1024}
       />
 <pointLight intensity={1} />
-      <primitive object={earth.scene} 
+      <primitive object={computer.scene} 
       scale={isMobile ? 0.08 : 0.1} 
       position-y={0} 
       rotation-y={0} />
