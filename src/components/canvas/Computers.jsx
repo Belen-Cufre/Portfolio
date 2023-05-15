@@ -4,8 +4,8 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
-const Computers = (isMobile) => {
-  const computer = useGLTF("./desktop_pc/scene.gltf");
+const Earth = (isMobile) => {
+  const earth = useGLTF("./desktop_pc/scene.gltf");
 
   return (
     <mesh>
@@ -18,18 +18,17 @@ const Computers = (isMobile) => {
         castShadow
         shadow-mapSize={1024}
       />
-<pointLight intensity={1} />
-      <primitive object={computer.scene} 
-      scale={isMobile ? 0.08 : 0.1} 
-      position-y={0} 
+      <pointLight intensity={1} />
+      <primitive object={earth.scene} 
+      scale={isMobile ? 0.005 : 0.01} 
+      position-y={-2.5} 
       rotation-y={0} />
     </mesh>
   );
 };
 
-const ComputersCanvas = () => {
+const ComputerCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
-
   useEffect(() => {
     // Add a listener for changes to the screen size
     const mediaQuery = window.matchMedia("(max-width: 500px)");
@@ -53,11 +52,11 @@ const ComputersCanvas = () => {
 
   return (
     <Canvas
-      frameloop='demand'
+    frameloop='demand'
       shadows
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
-      // camera={{ position: [20, 3, 5], fov: 25 }}
+      camera={{ position: [20, 3, 5], fov: 25 }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
@@ -66,12 +65,11 @@ const ComputersCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Computers isMobile={isMobile} />
+        <Earth isMobile={isMobile} />
       </Suspense>
-
       <Preload all />
     </Canvas>
   );
 };
 
-export default ComputersCanvas;
+export default ComputerCanvas;
