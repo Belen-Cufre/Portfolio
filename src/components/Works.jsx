@@ -55,7 +55,7 @@ const Works = () => {
           Mis proyectos en el mundo IT
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
-          Poyectos
+          Proyectos
         </h2>
       </motion.div>
       <div className='w-full flex'>
