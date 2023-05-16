@@ -6,8 +6,10 @@ import { styles } from '../styles';
 import { experiences } from '../constants';
 import { SectionWrapper } from '../hoc';
 import { textVariant } from '../utils/motion';
+import { useTranslation } from 'react-i18next'
 
 const ExperienceCard = ({experience}) => {
+  const { t }= useTranslation();
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -56,10 +58,10 @@ const Experience = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-center`}>
-          Un poco de lo que he hecho
+        {t('experience.title')}
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
-          Experiencia laboral
+        {t('experience.labor')}
         </h2>
       </motion.div>
 

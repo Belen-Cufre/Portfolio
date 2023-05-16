@@ -2,8 +2,11 @@ import { motion } from 'framer-motion';
 import { styles } from '../styles';
 // import { EarthCanvas } from './canvas';
 import ComputerCanvas from './canvas/Computers';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <section className='relative w-full h-screen mx-auto'>
       <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7x1 mx-auto flex flex-row items-start gap-5`}>
@@ -12,10 +15,9 @@ const Hero = () => {
           <div className='w-1 sm:h-80 h-40 violet-gradient'/>
         </div>
         <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            ¡Hola, mundo! Soy <span className='text-[#f7752f]'>Belén</span>
+          <h1 className={`${styles.heroHeadText} text-white`}>{t('hero.title')}<span className='text-[#f7752f]'>Belén</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>Desarrolladora Full-Stack y <br className='sm:block hidden'/> Traductora pública <br className='sm:block hidden'/> de Inglés
+          <p className={`${styles.heroSubText} mt-2 text-white-100`}>{t('hero.dev')}<br className='sm:block hidden'/>{t('hero.trad')}<br className='sm:block hidden'/>{t('hero.lang')}
           </p>
         </div>
       </div>

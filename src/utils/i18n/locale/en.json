@@ -1,0 +1,97 @@
+{
+    "hero": {
+        "title": "Hello, world! I`m a ",
+        "dev": "Full-Stack Developer and a",
+        "trad": "Sworn Certified Translator",
+        "lang": "of English"
+    },
+    "about": {
+        "intro": "Introduction",
+        "title": "Summary",
+        "summary": "If I had to describe my strengths, I would say that passion-for-learning is definitely the most important one. All throughout my labor career I have been recognized due to my versatility to meet all the challenges I have been given. I am always looking for my own growing, whether it is a personal or professional one. If I can learn something new, then that is added value for me, no matter how tiny that piece of knowledge may seem. I am really perseverant, even more when I am motivated."
+    },
+    "contact":{
+        "alertOk": "Thank you very much for your message. I will get back to you as soon as possible.",
+        "alertNok": "Something went wrong.",
+        "question": "Would you like to get in touch?",
+        "title": "Contact",
+        "name": "Your name",
+        "placeholder1": "What`s your name?",
+        "email": "Your e-mail",
+        "placeholder2": "What`s your e-mail?",
+        "msj": "Your message",
+        "placeholder3": "Tell me how I can help you.",
+        "load": "Sending...",
+        "send": "Send"
+    },
+    "experience": {
+        "title": "What I have done so far",
+        "labor": "Work Experience"
+    },
+    "feedback": {
+        "question": "What others say",
+        "testi": "Testimonials"
+    },
+    "navi": {
+        "en": "English",
+        "sp": "Spanish"
+    },
+    "footer": "This portfolio is a restyled project from JavaScript Mastery created by Belén Cufré.",
+    "works": {
+        "title": "My projects on IT World",
+        "proy": "Projects",
+        "summary1": "The projects below are a sample of the work I have done during this time. These projects have been both group and individual ones. Each of them has a brief description and a link to the code repository. I present them in chronological order, being the first one the earliest project I worked on.",
+        "summary2": "Through these samples, you can see my growth, my eagerness to keep learning, my ability to work in teams, and the pride I feel for my small achievements and contributions that make me a 'junior' today and will soon lead me to become a 'senior'."
+    },
+    "constants": {
+        "experiences": {
+            "one": {
+                "title": "React.js Developer",
+                "point1": "Developing and maintaining web applications using React.js and other related technologies.",
+                "point2": "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+                "point3": "Implementing responsive design and ensuring cross-browser compatibility.",
+                "point4": "Participating in code reviews and providing constructive feedback to other developers."
+            },
+            "two": {
+                "title": "React Native Developer",
+                "point1": "Developing and maintaining web applications using React.js and other related technologies.",
+                "point2": "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+                "point3": "Implementing responsive design and ensuring cross-browser compatibility.",
+                "point4": "Participating in code reviews and providing constructive feedback to other developers."
+            },
+            "three": {
+                "title": "Web Developer",
+                "point1":  "Developing and maintaining web applications using React.js and other related technologies.",
+                "point2": "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+                "point3": "Implementing responsive design and ensuring cross-browser compatibility.",
+                "point4": "Participating in code reviews and providing constructive feedback to other developers."
+            },
+            "four": {
+                "title": "Full stack Developer",
+                "point1": "Developing and maintaining web applications using React.js and other related technologies.",
+                "point2": "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+                "point3": "Implementing responsive design and ensuring cross-browser compatibility.",
+                "point4": "Participating in code reviews and providing constructive feedback to other developers."
+            }
+        },
+        "testimonials": {
+            "test1": "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+            "test2": "I've never met a web developer who truly cares about their clients' success like Rick does.",
+            "test3": "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!"
+        },
+        "projects": {
+            "one": {
+                "name": "Doggui App",
+                "description": "My first creation! It was my individual work for the Henry bootcamp. On this page, you will be able to see all the dog breeds provided by an external dog API, as well as upload your own dogs since, in my particular case, I also love dogs who lack a commercial breed. You can filter them by temperament and source, whether they are dogs from the API or uploaded by you. You can also sort them alphabetically and by weight."
+            },
+            "two": {
+                "name": "My CV",
+                "description": "Due to my lack of experience in HTML and CSS, I decided to continue practicing and created my CV. It features a dropdown menu that includes the option to view the same CV in English. It also includes my contact information to facilitate communication."
+            },
+            "three": {
+                "name": "Happy Paws",
+                "description": "Website created as the final project for the Henry bootcamp. It was a group project of 8 members. My role was primarily focused on the Backend. The website was created for a dog shelter in the province of Córdoba, Argentina. Through the site, users can request the adoption of available dogs, make donations, and purchase products. Users can also leave reviews once logged in, and those who are administrators have access to a private section where they can manage purchases, adoptions, user permissions, among other things."
+            }
+        }
+    }
+}

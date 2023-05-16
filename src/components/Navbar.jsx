@@ -1,12 +1,63 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { styles } from '../styles';
-import { navLinks } from '../constants';
-import { logo, menu, close } from '../assets';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import i18n from '../utils/i18n/i18n';
+import { styles } from "../styles";
+import { navLinks } from "../constants";
+import { logo, menu, close } from "../assets";
+import { useTranslation } from 'react-i18next';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import { Button } from '@mui/material';
 
 const Navbar = () => {
-  const [active, setActive] = useState("");
-  const [toggle, setToggle] = useState(false);
+
+  const { t } = useTranslation();
+  const [ active, setActive ] = useState("")
+  const [ toggle, setToggle ] = useState(false)
+
+  const handleLangChange = (lang) => {
+    i18n.changeLanguage(lang).then();
+  }
+
+  const getFlag = (lang) => {
+        switch (lang) {
+            case 'es':
+                return (
+                    <img
+                        src="https://flagcdn.com/w320/ar.png"
+                        width="45"
+                        height="30"
+                        alt={lang}
+                    />
+                );
+            case 'en':
+                return (
+                    <img
+                        src="https://flagcdn.com/w320/us.png"
+                        width="45"
+                        height="30"
+                        alt={lang}
+                    />
+                );
+            default:
+                return (
+                    <img
+                        src="https://www.otherworldproject.com/wiki/images/9/96/Unknown_flag.png"
+                        width="40"
+                        height="25"
+                        alt={'default'}
+                    />
+                );
+        }
+    };
+
+  const [anchorElLang, setAnchorElLang] = useState(null);
+    const handleOpenLang = (event) => {
+        setAnchorElLang(event.currentTarget);
+    };
+    const handleCloseLang = () => {
+        setAnchorElLang(null);
+    };
 
   return (
     <nav className={`
@@ -36,6 +87,47 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+
+          <div>
+                    <div>
+                        <Button onClick={handleOpenLang}>{getFlag(i18n.language)}</Button>
+                        <Menu
+                            sx={{ mt: '45px' }}
+                            id="menu-appbar"
+                            anchorEl={anchorElLang}
+                            anchorOrigin={{
+                                vertical: 'top',
+                                horizontal: 'right',
+                            }}
+                            keepMounted
+                            transformOrigin={{
+                                vertical: 'top',
+                                horizontal: 'right',
+                            }}
+                            open={Boolean(anchorElLang)}
+                            onClose={handleCloseLang}
+                        >
+                            <MenuItem
+                                selected={i18n.language === 'es'}
+                                onClick={() => {
+                                    handleCloseLang();
+                                    handleLangChange('es');
+                                }}
+                            >
+                                {getFlag('es')} {t('navi.sp')}
+                            </MenuItem>
+                            <MenuItem
+                                selected={i18n.language === 'en'}
+                                onClick={() => {
+                                    handleCloseLang();
+                                    handleLangChange('en');
+                                }}
+                            >
+                                {getFlag('en')} {t('navi.en')}
+                            </MenuItem>
+                        </Menu>
+                    </div>
+            </div>
 
             <div className='sm:hidden flex flex-1 justify-end items-center'>
               <img

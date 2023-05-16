@@ -1,3 +1,4 @@
+import i18n from "../utils/i18n/i18n";
 import {
     mobile,
     backend,
@@ -25,8 +26,8 @@ import {
     tripguide,
     threejs,
   } from "../assets";
-  
-  export const navLinks = [
+
+  export let navLinks = [
     {
       id: "about",
       title: "About",
@@ -41,7 +42,7 @@ import {
     },
   ];
   
-  const services = [
+  let services = [
     {
       title: "Desarrollo Full-Stack",
       icon: web,
@@ -60,7 +61,7 @@ import {
     },
   ];
   
-  const technologies = [
+  let technologies = [
     {
       name: "HTML 5",
       icon: html,
@@ -119,81 +120,58 @@ import {
     },
   ];
   
-  const experiences = [
+  let experiences = [
     {
-      title: "React.js Developer",
+      title: i18n.t('constants.experiences.one.title'),
       company_name: "Starbucks",
       icon: starbucks,
       iconBg: "#383E56",
       date: "March 2020 - April 2021",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
+      points: [i18n.t('constants.experiences.one.point1'), i18n.t('constants.experiences.one.point2'), i18n.t('constants.experiences.one.point3'), i18n.t('constants.experiences.one.point4')],
     },
     {
-      title: "React Native Developer",
+      title: i18n.t('constants.experiences.two.title'),
       company_name: "Tesla",
       icon: tesla,
       iconBg: "#E6DEDD",
       date: "Jan 2021 - Feb 2022",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
+      points: [i18n.t('constants.experiences.two.point1'), i18n.t('constants.experiences.two.point2'), i18n.t('constants.experiences.two.point3'), i18n.t('constants.experiences.two.point4')],
     },
     {
-      title: "Web Developer",
+      title: i18n.t('constants.experiences.three.title'),
       company_name: "Shopify",
       icon: shopify,
       iconBg: "#383E56",
       date: "Jan 2022 - Jan 2023",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
+      points: [i18n.t('constants.experiences.three.point1'), i18n.t('constants.experiences.three.point2'), i18n.t('constants.experiences.three.point3'), i18n.t('constants.experiences.three.point4')],
     },
     {
-      title: "Full stack Developer",
+      title: i18n.t('constants.experiences.four.title'),
       company_name: "Meta",
       icon: meta,
       iconBg: "#E6DEDD",
       date: "Jan 2023 - Present",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
+      points: [i18n.t('constants.experiences.four.point1'), i18n.t('constants.experiences.four.point2'), i18n.t('constants.experiences.four.point3'), i18n.t('constants.experiences.four.point4')],
     },
   ];
   
-  const testimonials = [
+  let testimonials = [
     {
-      testimonial:
-        "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+      testimonial: i18n.t('constants.testimonials.test1'),
       name: "Sara Lee",
       designation: "CFO",
       company: "Acme Co",
       image: "https://randomuser.me/api/portraits/women/4.jpg",
     },
     {
-      testimonial:
-        "I've never met a web developer who truly cares about their clients' success like Rick does.",
+      testimonial: i18n.t('constants.testimonials.test2'),
       name: "Chris Brown",
       designation: "COO",
       company: "DEF Corp",
       image: "https://randomuser.me/api/portraits/men/5.jpg",
     },
     {
-      testimonial:
-        "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+      testimonial: i18n.t('constants.testimonials.test3'),
       name: "Lisa Wang",
       designation: "CTO",
       company: "456 Enterprises",
@@ -201,11 +179,10 @@ import {
     },
   ];
   
-  const projects = [
+  let projects = [
     {
-      name: "App de perros",
-      description:
-        "¡Mi primera creación! Fue mi trabajo individual para el bootcamp de Henry. En esta página podrás ver todas las razas de perros que nos brinda una API de perros externa y a su vez cargar tus propios perros, ya que en mi caso particular también amo a los perros sin raza comercial. Podrás filtrarlos por temperamento y por fuente: es decir si son perros que provienen de la API o son cargados por tí. También los puedes ordernar alfabéticamente y por peso.",
+      name: i18n.t('constants.projects.one.name'),
+      description: i18n.t('constants.projects.one.description'),
       tags: [
         {
           name: "react",
@@ -224,9 +201,8 @@ import {
       source_code_link: "https://github.com/Belen-Cufre/PI-Dogs-main/",
     },
     {
-      name: "Mi CV",
-      description:
-        "Con motivo de mi falta de experiencia en HTML y CSS, decidí seguir practicando y hacer mi CV. Tiene un menú desplegable que incluye la opción de ver el mismo CV en inglés. También cuenta con mi información de contacto para facilitar la comunicación.",
+      name: i18n.t('constants.projects.two.name'),
+      description: i18n.t('constants.projects.two.description'),
       tags: [
         {
           name: "HTML",
@@ -245,9 +221,8 @@ import {
       source_code_link: "https://github.com/Belen-Cufre/CV_Cufre",
     },
     {
-      name: "Patitas Felices",
-      description:
-        "Página web creada como trabajo final para el bootcamp de Henry. Fue un trabajo grupal de 8 miembros. Mi desempeño se basó mayormente en el Backend. La página se hizo para un refugio de perros de la provincia de Córdoba, Argentina. A través del sitio, se puede solicitar la adopción de los perros disponibles, hacer donaciones y compras de productos. También se pueden dejar reseñas una vez logueado y los usuarios con perfil de administrador tienen acceso a una sección privada donde se pueden gestionar las compras, las adopciones, los permisos de los usuarios, entre otras.",
+      name: i18n.t('constants.projects.three.name'),
+      description: i18n.t('constants.projects.three.description'),
       tags: [
         {
           name: "React",
